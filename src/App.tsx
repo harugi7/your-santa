@@ -1,11 +1,9 @@
 function App() {
 
   return (
-    <>
-      <div>
+    <div>
         테스트
-      </div>
-    </>
+    </div>
   )
 }
 
