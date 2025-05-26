@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'galmatt';
+    src: url('src/styles/fonts/galmatt.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'HARRYP';
+    src: url('src/styles/fonts/HARRYP.TTF') format('truetype');
+}
