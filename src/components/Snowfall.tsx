@@ -39,7 +39,7 @@ const SnowContainer = styled.div`
     z-index: 999;
 `;
 
-const Snow = () => {
+function Snow(){
   const snowflakes = Array.from({ length: 50 }).map((_, i) => {
     const size = Math.floor(Math.random() * 6 + 4);
     return (
