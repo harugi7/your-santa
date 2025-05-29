@@ -2,7 +2,7 @@ import PageLayout from "../components/PageLayout.tsx";
 import styled from "styled-components";
 import Snowfall from "../components/Snowfall.tsx";
 import '../styles/fonts/fonts.css';
-import StartBtn from "../components/startBtn/StartBtn.tsx";
+import IntroBtn from "../components/button/IntroBtn.tsx";
 
 function Intro() {
 
@@ -13,7 +13,7 @@ function Intro() {
         <StyledMainTitle>MAGICAL</StyledMainTitle>
         <StyledMainTitle>MAILROOM</StyledMainTitle>
       </StyledTitleDiv>
-      <StartBtn/>
+      <IntroBtn/>
       <Dome />
       <Snowfall/>
     </PageLayout>
