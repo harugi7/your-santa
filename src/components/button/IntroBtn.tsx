@@ -1,7 +1,7 @@
 import styled, {keyframes} from "styled-components";
 import {useEffect, useState} from "react";
 
-export default function StartBtn() {
+export default function IntroBtn() {
   const [isHovered, setIsHovered] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
 
