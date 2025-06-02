@@ -17,7 +17,7 @@ const StyledPageLayout = styled.div<{ $opacity: number }>`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh;
     padding: 2rem;
     background-color: ${({ $opacity }) => `rgba(27, 42, 65, ${$opacity})`};
     color: ${colors.white};

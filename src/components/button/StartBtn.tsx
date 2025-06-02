@@ -1,4 +1,23 @@
 import styled, { keyframes } from 'styled-components';
+import {useNavigate} from "react-router-dom";
+
+function StartBtn(){
+  const navigate = useNavigate();
+
+  function handleBtn() {
+    navigate("/warn");
+  }
+
+  return (
+    <Button>
+      <TextWrapper>
+        <SlidingText onClick={handleBtn}>기적 일으키러 가기</SlidingText>
+      </TextWrapper>
+    </Button>
+  );
+};
+
+export default StartBtn;
 
 const marquee = keyframes`
   0% {
@@ -37,15 +56,3 @@ const TextWrapper = styled.div`
   display: flex;
   align-items: center;
 `;
-
-function StartBtn(){
-  return (
-    <Button>
-      <TextWrapper>
-        <SlidingText>MAKE MAGIC</SlidingText>
-      </TextWrapper>
-    </Button>
-  );
-};
-
-export default StartBtn;

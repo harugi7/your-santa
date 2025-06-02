@@ -9,9 +9,8 @@ function Intro() {
   return (
     <PageLayout>
       <StyledTitleDiv>
-        <StyledMiniTitle>SANTA&apos;S</StyledMiniTitle>
-        <StyledMainTitle>MAGICAL</StyledMainTitle>
-        <StyledMainTitle>MAILROOM</StyledMainTitle>
+        <StyledMiniTitle>너의</StyledMiniTitle>
+        <StyledMainTitle>산타</StyledMainTitle>
       </StyledTitleDiv>
       <IntroBtn/>
       <Dome />
@@ -26,8 +25,8 @@ const StyledTitleDiv = styled.div`
   flex-direction: column;
 `
 const StyledMiniTitle = styled.div`
-  font-family: 'HARRYP', sans-serif;
-  font-size: 50px;
+  font-family: 'galmatt', sans-serif;
+  font-size: 70px;
   font-weight: bold;
   color: white;
   position: relative;
@@ -38,8 +37,8 @@ const StyledMiniTitle = styled.div`
 `;
 
 const StyledMainTitle = styled.div`
-  font-family: 'HARRYP', sans-serif;
-  font-size: 110px;
+  font-family: 'galmatt', sans-serif;
+  font-size: 150px;
   font-weight: bold;
   color: white;
   position: relative;
