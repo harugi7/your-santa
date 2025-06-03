@@ -19,7 +19,6 @@ const StyledNextBtn = styled.button`
   padding: 0.75em 1.5em;
   font-size: 1rem;
   overflow: hidden;
-  margin-top: 10px;
 
   &::before,
   &::after {
