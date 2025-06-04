@@ -1,7 +1,9 @@
 import styled, {keyframes} from "styled-components";
 import {useEffect, useState} from "react";
+import {useNavigate} from "react-router-dom";
 
-export default function StartBtn() {
+export default function IntroBtn() {
+  const navigate = useNavigate();
   const [isHovered, setIsHovered] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -18,15 +20,20 @@ export default function StartBtn() {
     return () => clearTimeout(timer);
   }, [isHovered]);
 
+  const handleClick = () => {
+    navigate('/guide');
+  };
+
 
   return (
     <StyledStartBtn
+      onClick={handleClick}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       isExpanded={isExpanded}
       isHovered={isHovered}
     >
-      START THE MAGIC
+      산타 되어보기
     </StyledStartBtn>
   )
 }
@@ -73,6 +80,7 @@ const StyledStartBtn = styled.button<{ isExpanded: boolean; isHovered: boolean }
     border-radius: 40px;
     background-color: ${({ isExpanded }) => (isExpanded ? "#fff" : "#ffffff10")};
     color: ${({ isExpanded }) => (isExpanded ? "#000000" : "#fff")};
+    font-family: sans-serif;
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
