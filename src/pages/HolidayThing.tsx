@@ -3,12 +3,19 @@ import {useNavigate} from "react-router-dom";
 import Background from "../components/Background.tsx";
 import NextBtn from "../components/button/NextBtn.tsx";
 import {CenterContainer, StyledMainText, StyledSubText} from "../components/typography.ts";
+import {useState} from "react";
+import FadedUnderlineInput from "../components/textInput/FadedUnderlineInput.tsx";
 
 function HolidayThing() {
   const navigate = useNavigate();
+  const [holidayThing, setHolidayThing] = useState("");
 
   function handleNext() {
     navigate("/cheer");
+  }
+
+  function handleHolidayThingChange(e: React.ChangeEvent<HTMLInputElement>) {
+    setHolidayThing(e.target.value);
   }
 
   return(
@@ -24,6 +31,11 @@ function HolidayThing() {
         <StyledSubText>
           {`"나는 ~ 연말을 보내."라는 형식으로 편지가 작성됩니다.`}
         </StyledSubText>
+        <FadedUnderlineInput
+          value={holidayThing}
+          onChange={handleHolidayThingChange}
+          placeholder="행복하게 연말을 보내는 팁을 공유해주세요."
+        />
         <NextBtn onClick={handleNext}/>
       </CenterContainer>
     </PageLayout>

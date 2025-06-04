@@ -3,12 +3,19 @@ import NextBtn from "../components/button/NextBtn.tsx";
 import Background from "../components/Background.tsx";
 import {useNavigate} from "react-router-dom";
 import {CenterContainer, StyledMainText, StyledSubText} from "../components/typography.ts";
+import FadedUnderlineInput from "../components/textInput/FadedUnderlineInput.tsx";
+import {useState} from "react";
 
 function GetUserMail() {
   const navigate = useNavigate();
+  const [email, setEmail] = useState("");
 
   function handleNext() {
     navigate("/santa-name");
+  }
+
+  function handleEmailChange(e: React.ChangeEvent<HTMLInputElement>) {
+    setEmail(e.target.value);
   }
 
   return (
@@ -23,6 +30,11 @@ function GetUserMail() {
         <StyledSubText>
           {`산타는 크리스마스에 찾아올 것입니다.`}
         </StyledSubText>
+        <FadedUnderlineInput
+          value={email}
+          onChange={handleEmailChange}
+          placeholder="이메일 주소를 입력하세요"
+        />
         <NextBtn onClick={handleNext}/>
       </CenterContainer>
     </PageLayout>

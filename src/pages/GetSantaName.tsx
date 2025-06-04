@@ -3,12 +3,19 @@ import Background from "../components/Background.tsx";
 import NextBtn from "../components/button/NextBtn.tsx";
 import {useNavigate} from "react-router-dom";
 import {CenterContainer, StyledMainText, StyledSubText} from "../components/typography.ts";
+import {useState} from "react";
+import FadedUnderlineInput from "../components/textInput/FadedUnderlineInput.tsx";
 
 function GetSantaName() {
   const navigate = useNavigate();
+  const [santaName, setSantaName] = useState("");
 
   function handleNext() {
     navigate("/holiday-thing");
+  }
+
+  function handleSantaNameChange(e: React.ChangeEvent<HTMLInputElement>) {
+    setSantaName(e.target.value);
   }
 
   return (
@@ -23,6 +30,11 @@ function GetSantaName() {
         <StyledSubText>
           {`추천 별명: 친절한 산타, 귀여운 산타`}
         </StyledSubText>
+        <FadedUnderlineInput
+          value={santaName}
+          onChange={handleSantaNameChange}
+          placeholder="산타의 이름을 입력하세요"
+        />
         <NextBtn onClick={handleNext}/>
       </CenterContainer>
     </PageLayout>
