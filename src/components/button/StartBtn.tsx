@@ -9,9 +9,9 @@ function StartBtn(){
   }
 
   return (
-    <Button>
+    <Button onClick={handleBtn}>
       <TextWrapper>
-        <SlidingText onClick={handleBtn}>기적 일으키러 가기</SlidingText>
+        <SlidingText>기적 일으키러 가기</SlidingText>
       </TextWrapper>
     </Button>
   );
