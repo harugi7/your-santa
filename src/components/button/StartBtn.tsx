@@ -15,7 +15,7 @@ function StartBtn(){
       </TextWrapper>
     </Button>
   );
-};
+}
 
 export default StartBtn;
 
